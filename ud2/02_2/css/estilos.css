@@ -1,0 +1,162 @@
+@import url('fonts.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+footer a{
+    color: #bf12f3;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+footer{
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #134678;
+    color: white;
+}
+
+footer table{
+    width: 1200px;
+    color: black;
+}
+footer table td{
+    color: #f39c12;
+}
+
+table footer{
+    margin-bottom: 20px;
+}
+
+.profesores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+article footer{
+    background-color: #f4f4f4;
+    color:black;
+    justify-content: start;
+}
+
+table{
+    background-color: #ecf0f1;
+}
+
+header{
+    background-color: #134678;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#titulo{
+    display: flex;
+    flex-direction: row;
+    background-color: #134678;
+    text-align: center;
+    justify-content: center;
+}
+
+div.menu{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #134678;
+    z-index: 9999;
+}
+
+main img{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+th[colspan="5"]{
+    background-color: #f39c12;
+}
+
+th{
+    background-color: #2980b9;
+}
+
+section{
+    width: 1200px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.caja {
+    padding: 20px;
+    border: 2px solid #333;
+    margin: 10px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+}
+
+caption{
+    color: #2980b9;
+    font-family: 'Arial', sans-serif;
+}
+
+.pie{
+    margin-top: 10px;
+    color:white
+}
+
+#iconos{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+td{
+    align-items: center;    
+}
+
+footer img{
+    margin-left: 10px;
+    background-color: white;
+}

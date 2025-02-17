@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta name="author">
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+    <title>Prueba dados</title>
+    <style>
+        #caja{
+            margin: 5px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            /*eje principal*/
+            justify-content: space-around;
+            align-items: space-around;
+        }
+  
+        #caja div{
+            margin: 5px;
+            border: 1px solid green;
+            flex-grow:1;    
+        }
+        #caja div:nth-child(1){
+            flex-basis:25%;
+        }
+        #caja div:nth-child(2){
+            flex-basis:25%;
+            flex-grow:2;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">
+        <div>uno</div>
+        <div>dos
+          <br>dos
+          <br>dos
+          <br>dos
+        </div>
+        <div>tres</div>
+        <div>cuatro</div>
+    </div>
+</body>
+</html>

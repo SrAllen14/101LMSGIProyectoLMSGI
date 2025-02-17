@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alvaro">
+    <meta name="description" content="formulario-sobre-videojuegos-que-incluye-opinion-personal-del-usuario-y-un-pequeño-cuestionario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">                                                         <!--Enlaza una hoja de estilos CSS externa-->
+    <link rel="icon" type="imagen/x-icon" href="../media/favicon/favicon.ico">                                              <!--Linea de código que pone el favicon. En este caso al ser de tipo .ico cambia el type: que es imagen/x-icon.-->
+    <title>ud2.03 Álvaro Allén Perlines</title>                                                                             <!--Título de la página web. Aparece en la pestaña superior al lado del favicon-->
+</head>
+<body>
+    <header><h1>Plantilla de formulario de videojuegos.</h1></header>                                                       <!--Comienzo del header. Título de la página situado en el header. Final del header-->
+    <main>                                                                                                                  <!--Principio del main-->
+        <form action="get">                                                                                                 <!--Principio del formulario-->
+            <fieldset>                                                                                                      <!--Principio del fieldset: información personal del usuario. Consiste en un recuadro que redea todo lo que esta en su interior.-->
+                <legend>Información personal del usuario</legend>                                                           <!--La etiqueta legend que es propia del fieldset. Es el título de éste.-->
+                <div>                                                                                                       <!--Nombre e input de tipo texto para introducir el nombre.-->
+                    <label for="primero">Nombre: </label>
+                    <input type="text" name="nombre" id="primero">
+                </div>
+                <div>                                                                                                       <!--Apellido e input de tipo texto para introducir el apellido.-->
+                    <label for="segundo">Apellidos: </label>
+                    <input type="text" name="apellido" id="segundo">
+                </div>
+                <div>                                                                                                       <!--Usuario e input de tipo texto para introducir el usuario.-->
+                    <label for="usuario">Usuario: </label>
+                    <input type="text" name="email" id="usuario">
+                </div>
+                <div>                                                                                                       <!--Contraseña e input de tipo contraseña el cual se diferencia con el de tipo texto en que la información introducida está censurada por puntos.-->
+                    <label for="contrasena">Contraseña: </label>
+                    <input type="password" name="constraseña" id="contrasena">
+                </div>
+                <div>                                                                                                       <!--Sexo e input de tipo radio que consiste en círculos que al hacerles click se marcan. Para que funcionen tienen que tener el mismo name.-->
+                    <label for="idFemenino">Sexo: </label>
+                    <label for="idFemenino"><input type="radio" name="Sex" id="idFemenino">Masculino</label>
+                    <label for="idMasculino"><input type="radio" name="Sex" id="idMasculino">Femenino</label>
+                </div>
+                <div>                                                                                                       <!--Fecha de nacimiento e input de tipo fecha para introducir la fecha. A mayores tiene un valor máximo y mínimo permitido.-->
+                    <label for="cumpleanos">Fecha de nacimiento:</label>
+                    <input type="date" id="cumpleanos" name="cumpleanos" max="2020-01-01" min="1930-01-01">
+                </div>
+                <div>                                                                                                       <!--Email e input de tipo email para introducir el correo electrónico del usuario. A mayores tiene un placeholder que es un mensaje que aparece en el recuadro a modo de referencia visual.-->
+                    <label for="email">Correo electrónico: </label>
+                    <input type="email" id="email" placeholder="ejemplo@gmail.com">
+                </div>
+                <div>                                                                                                       <!--Nº de teléfono e input de tipo teléfono para introducir el número. Tiene un pattern a seguir con el siguiente patrón: 3 dígitos del 1 al 9 espacio 3 dígitos del 1 al 9 espacio 3 dígitos del 1 al 9.-->
+                    <label for="tell">Nº teléfono: </label>
+                    <input type="tel" id="tell" name="Telefono" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" 
+                     placeholder="000 000 000">
+                </div>
+            </fieldset>                                                                                                     <!--Fin del fieldset.-->
+           <br>
+            <fieldset>                                                                                                      <!--Comienzo del fieldset: opinión de videojuegos.-->                  
+                <legend>Opinión de videojuegos</legend>
+                <div>                                                                                                       <!--Input de tipo hora. Recuadro en el que se señala una hora del día en formato: horas:minutos.-->
+                    <label for="horae">Me gustaria saber cuantas horas juegas en un día.</label>
+                    <label for="horae">Comienzo: </label>
+                    <input type="time" id="horae">
+                    <label for="horaf">Final: </label>
+                    <input type="time" id="horaf">
+                </div>
+                <div>                                                                                                       <!--Input de tipo rango. Barra horizontal con otra barra azul en su interior. Dicha barra azul marca el valor del rango. En este caso tiene un valor mínimo de 1 y un valor máximo de 10. Su valor predeterminado es 5.-->
+                    <label for="idrate">Valora la industria del videojuego actual: </label>
+                    <input type="range" name="Rango" id="idrate" max="10" min="1" value="5">
+                </div>
+                <div>                                                                                                       <!--Input de tipo select. Es un caso raro ya que la etiqueta es select y no es un atributo de input. Consiste en un recuadro que al ser seleccionado muestra por pantalla una lista con diferentes valores. Seleccionando uno se cierra la lista y se situa el valor en el recuadro.-->
+                    <label for="primero">Desarrolladora favorita: </label>
+                    <select>
+                        <option value="nintendo">Nintendo</option>
+                        <option value="EA">Electronic Arts</option>
+                        <option value="microsoft">Microsoft</option>
+                        <option value="ubisoft">Ubisoft</option>
+                        <option value="activision">Activision</option>
+                        <option value="bethesda">Bethesda</option>
+                        <option value="fromsoftware">FrontSoftware</option>
+                        <option value="taketwo">Take-Two</option>
+                    </select>
+                </div>
+                <div>                                                                                                       <!--Input de tipo checkbox. A diferencia del tipo radio en este caso se pueden seleccionar más de una opción.-->
+                    <label for="tipo1">Selecciona tus géneros de videojuegos favoritos:</label><br>
+                    <input type="checkbox" id="tipo1" name="genero1" value="Arcade">
+                    <label for="tipo1">Arcade</label>
+                    <input type="checkbox" id="tipo2" name="genero2" value="Lucha">
+                    <label for="tipo2">Lucha</label>
+                    <input type="checkbox" id="tipo3" name="genero3" value="Plataformas">
+                    <label for="tipo3">Plataformas</label>
+                    <input type="checkbox" id="tipo4" name="genero4" value="Supervivencia">
+                    <label for="tipo4">Supervivencia</label><br>
+                    <input type="checkbox" id="tipo5" name="genero5" value="Shooter">
+                    <label for="tipo5">Shooter</label>
+                    <input type="checkbox" id="tipo6" name="genero6" value="Estrategia">
+                    <label for="tipo6">Estrategia</label>
+                    <input type="checkbox" id="tipo7" name="genero7" value="Simulador">
+                    <label for="tipo7">Simulador</label>
+                    <input type="checkbox" id="tipo8" name="genero8" value="Deportes">
+                    <label for="tipo8">Deportes</label>
+                </div>
+                <div>                                                                                                       <!--Input de tipo texto.-->
+                    <label for="juegofav">Juego favorito:</label>
+                    <input type="text" id="juegofav">
+                </div>
+                <div>                                                                                                       <!--Etiqueta textarea la cual crea un recuadro para escribir texto. Tiene un tamaño especificado de 30 columnas y 4 filas. También tiene un placeholder con el texto de: "texto de ejemplo"-->
+                    <label for="porque">¿Por qué?</label>
+                    <br>
+                    <textarea name="texto" id="porque" cols="30" rows="4" placeholder="Texto de ejemplo..."></textarea>
+                </div>
+                <div>                                                                                                       <!--Input de tipo number el cual recibe un número o mediante flechas puedes aumentar o disminuir el valor. Tiene un máximo y un mínimo establecido de 10 y 1, respectivamente.-->
+                    <label for="primero">Valora las siguentes sagas:</label>
+                    <br>
+                    <label for="primero">The Legend of Zelda--</label>
+                    <label for="numero">Valoracion:</label>
+                    <input type="number" id="numero" min="1" max="10">
+                    <br>
+                    <label for="primero">Grand Theft Auto--</label>
+                    <label for="numero1">Valoracion:</label>
+                    <input type="number" id="numero1" min="1" max="10">
+                    <br>
+                    <label for="primero">The Last of Us--</label>
+                    <label for="numero2">Valoracion:</label>
+                    <input type="number" id="numero2" min="1" max="10">
+                    <br>
+                    <label for="primero">Resident Evil--</label>
+                    <label for="numero3">Valoracion:</label>
+                    <input type="number" id="numero3" min="1" max="10">
+                    <br>
+                </div>
+            </fieldset>                                                                                                     <!--Final del fieldset: opinión de videojuegos.-->
+            <br>
+            <fieldset>                                                                                                      <!--Comienzo del fieldset: preguntas rápidas.-->
+                <legend>Preguntas rápidas</legend>
+                <div>                                                                                                       <!--Input de tipo radio-->
+                    <label for="primero">¿Cual fue el primer juego de la historia?</label>
+                    <br>
+                    <label for="tetris"><input type="radio" id="tetris" name="juego" >Tetris</label>
+                    <label for="nac"><input type="radio" id="nac" name="juego" >Nought and crosses</label>
+                    <label for="space"><input type="radio" id="space" name="juego" >Space Invaders</label>
+                    <label for="cod"><input type="radio" id="cod" name="juego" >Call of Duty</label>
+                </div>
+                <div>                                                                                                       <!--Input de tipo radio. Esta vez en vez de estar acompañados de texto, tenemos imágenes mediante la etiqueta img.-->
+                    <label for="primero">¿Qué empresa desarrolla la empresa la saga de Call of Duty?</label>
+                    <br>
+                    <label for="activision"><input type="radio" id="activision" name="juego" ><img src="media/activision.jpeg" alt="" width="150"></label>
+                    <label for="epicgames"><input type="radio" id="epicgames" name="juego" ><img src="media/epic.jpeg" alt="" width="100"></label>
+                    <label for="mojang"><input type="radio" id="mojang" name="juego" ><img src="media/mojang.jpeg" alt="" width="175"></label>
+                </div>
+                <div>                                                                                                       <!--Etiqueta de tipo select.-->
+                    <label for="primero">¿Qué juego <b>NO</b> es de la desarrolladora Electronic Arts (EA)?</label>
+                    <br>
+                    <select name="juego3" id="eajuego">
+                        <option value="fifa">FIFA</option>
+                        <option value="sims">Los Sims</option>
+                        <option value="battlefield">Battlefield</option>
+                        <option value="papersplease">Papers Please</option>
+                        <option value="apex">Apex Legends</option>
+                    </select>
+                </div>
+                <div>                                                                                                       <!--Input de tipo imagen e input de tipo color. Al pulsarlo, se abre una paleta de colores y también nos da la opción de escribirlo en rgb y hexadecimal-->
+                    <label>Se acerca el final... ¿con que color se asocia este logo?</label>
+                    <input type="image" src="media/rocket.jpeg" alt="Submit" width="175" height="130">
+                    <br>
+                    <label for="color">Ayúdate de esta paleta de colores: </label>
+                    <input type="color" id="color">
+                </div>
+                <div>                                                                                                       <!--Input de tipo mes el cual nos muestra un recuadro en el que se puede especificar mes y año-->
+                    <label for="mes">Y por último...¿en qué mes y en que año salio el <b>MINECRAFT</b>?</label>
+                    <br>
+                    <label for="mes">Mes: </label>
+                    <input type="month" id="mes">
+                </div>
+            </fieldset>                                                                                                     <!--Final del fieldset: preguntas rápidas.-->
+            <br>
+            <div>
+                <label for="fav">Puedes insertar aqui tu escena favorita de los videojuegos: </label>
+                <input type="file" id="fav" name="escena_juego">
+            </div>
+            <div>                                                                                                           <!--Input de tipo url para introducir en un campo de texto un enlace web-->
+                <label for="link">Puedes escribir tu página de videojuegos favorita: </label>
+                <input type="url" id="link">
+                <input type="hidden" id="secreto" name="secreto" value="2600">                                              <!--Input de tipo hidden el cual no se muestra en la página pero envia información al pulsar un input de tipo submit.-->    
+            </div>
+            <div>                                                                                                           <!--Input de tipo semana en el cual indicamos semana y año de cuando se ha realizado este formulario. También hay input de tipo submit que es un botón que envia la información una vez termiando el formulario y otro de tipo reset que reinicia toda la página poniendo todos los inputs al valor predeterminado-->
+                <label for="primero">Realizado:</label>
+                <br>
+                <label for="semana">Semana: </label>
+                <input type="week" id="semana">
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reiniciar">
+            </div>
+        </form>                                                                                                             <!--Final del formulario-->
+    </main>
+    <footer>
+        <a class="w3" href="https://validator.w3.org/check?uri=https://daw101.ieslossauces.es/101LMSGIProyectoLMSGI/ud2/03/index.html"><img src="../../../webroot/media/imagenes/w3c.png" alt="Validado por W3C" width="40" height="20"></a>                                                                                                                   <!--Principio del pie de página-->
+        <p>                                                                                                                 <!--Parrafo con información-->
+            “202x-2x IES LOS SAUCES. ©Todos los derechos reservados.
+            <a href="https://daw101.ieslossauces.es/101LMSGIProyectoLMSGI/index.html">Álvaro Allén Perlines</a>
+        </p>
+        <time datetime="2024-12-10">Última actualización: 10-12-2024</time>                                                 <!--Etiqueta de tipo time donde se recoge cuando se ha realizado la última modificación.-->
+    </footer>
+</body>
+</html>

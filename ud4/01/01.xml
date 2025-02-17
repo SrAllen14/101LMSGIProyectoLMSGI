@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Nombre: Alvaro Allen
+Descripcion: mail entre personas
+-->
+<!DOCTYPE mail[
+    <!ELEMENT destinatario (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT remitente (#PCDATA)>
+    <!ELEMENT destinatarios (destinatario+)>
+    <!ELEMENT fechamensaje (dia, mes, anio)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT p (#PCDATA|strong)*>
+    <!ELEMENT h2 (#PCDATA|strong)*>
+    <!ELEMENT li (#PCDATA|strong)*>
+    <!ELEMENT ul (#PCDATA|strong|li)*>
+    <!ELEMENT strong (#PCDATA)>
+    <!ELEMENT mensaje (#PCDATA|p|strong|h2|ul|li)*>
+    <!ELEMENT ficheros_adjuntos (fichero+)>
+    <!ELEMENT fichero (nombre, tipo)>
+    <!ELEMENT mail (remitente, destinatarios, fechamensaje, asunto, mensaje, ficheros_adjuntos)>
+]>
+<mail>
+    <remitente>lola@gmail.com</remitente>
+    <destinatarios>
+        <destinatario>carniceriaPaco@gmail.com</destinatario>
+        <destinatario>pepeviyuela@gmail.com</destinatario>
+    </destinatarios>
+    <fechamensaje>
+        <dia>25</dia>
+        <mes>11</mes>
+        <anio>2024</anio>
+    </fechamensaje>
+    <asunto>Pago cena navidad</asunto>
+    <mensaje>
+        <h2>Buenos dias: queria enviarle los archivos referentes a la compra de carne realizada el dia 23/11/2024.</h2> 
+        <p>El pago ha sido realizado mediante transaccion bancaria desde la cuenta IBAN: <strong>ES-4185-4656-4685-4541</strong>
+        a la cuenta con IBAN: <strong>ES-4648-2113-8798-1584</strong> propietario de la cuenta: dueño de la carniceriaPaco: Francisco
+        Reboyedo. Queria especificar la carne ha llegado en buen estado y que el trato ha sido agradable y profesional.
+        Muchas gracias y que tenga una feliz Navidad y unas felices fiestas.
+        Agrego lista de la compra:
+        </p>
+        <ul>
+        <li>Pieza de cordero entera (10 kg): 40€</li>
+        <li>Surtido de embutido X3: 15€/ud</li>
+        </ul>
+    </mensaje>
+    <ficheros_adjuntos>
+        <fichero>
+            <nombre>ticket.jpg</nombre>
+            <tipo>image/jpg</tipo>
+        </fichero>
+        <fichero>
+            <nombre>ticket.pdf</nombre>
+            <tipo>application/pdf</tipo>
+        </fichero>
+    </ficheros_adjuntos>
+</mail>

@@ -1,0 +1,65 @@
+@import url(fonts.css);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Pacifico-Regular', cursive;
+    font-size: 5em;
+    color: chocolate;
+    text-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+header{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
+}
+
+header div{
+    margin: 10px;
+    width: auto;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    color: gray
+}
+
+div.audios, div.videos, div.fotos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1500px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px black
+}
+
+.audios div, .videos div, .fotos img{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: brown;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nombre: Alvaro Allen
+    Descripcion libros enlazados
+    Fecha de modificación 11/12/2024-->
+<!DOCTYPE biblioteca SYSTEM "02.dtd">
+<biblioteca>
+    <libro idlibro="libro1" genero="novela">
+        <titulo>Punto para los locos.</titulo>
+        <autores>
+            <autor>
+                <nombre>Angel</nombre>
+                <apellido>Martín</apellido>
+                <nacionalidad>Español</nacionalidad>
+            </autor>
+        </autores>
+        <anio>2024</anio>
+    </libro>
+    <libro idlibro="libro2" genero="teatro" ref="libro1">
+        <titulo>El caballo de troya</titulo>
+        <autores>
+            <autor>
+                <nombre>Angel</nombre>
+                <apellido>Martín</apellido>
+                <nacionalidad>Español</nacionalidad>
+            </autor>
+        </autores>
+        <anio>2022</anio>
+    </libro>
+</biblioteca>
