@@ -9,9 +9,21 @@
         <xsl:value-of select="concat(name(current()), ':')"/>
         <xsl:for-each select="ethernets">
             <xsl:value-of select="concat($newline, $newtab, name(current()),':')"/>
-            <xsl:element name="{name()}">
-                <xsl:value-of select="."/>
-            </xsl:element>
+            <xsl:value-of select="concat($newline, $newtab, $newtab, name, ':')"/>
+            <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, name(addresses), ':')"/>
+            <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, $newtab, addresses)"/>
+            <xsl:if test="gateway4">
+                <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, 'routes:')"/>
+                <xsl:value-of select="concat($newline, $newtab, $newtab, 'to: default')"/>
+                <xsl:value-of select="concat($newline, $newtab, $newtab, 'via: ', gateway4)"/>
+            </xsl:if>
+            <xsl:if test="nameservers">
+                <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, name(nameservers), ':')"/>
+                <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, 'addresses:')"/>
+                <xsl:for-each select="nameservers/addresses">
+                    <xsl:value-of select="concat($newline, $newtab, $newtab, $newtab, $newtab, current())"/>
+                </xsl:for-each>
+            </xsl:if>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
