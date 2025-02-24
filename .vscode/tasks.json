@@ -7,7 +7,7 @@
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
 			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
 			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
-			"resultPath": "${workspaceFolder}/ud5/06/target/index.yaml",
+			"resultPath": "${workspaceFolder}/ud5/03/target/index.html",
 			"allowSyntaxExtensions40": "off",
 			"messageEscaping": "adaptive",
 			"group": {
