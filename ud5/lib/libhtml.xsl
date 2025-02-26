@@ -4,15 +4,8 @@
                 expand-text="yes"
                 version="3.0">
 
-    <xsl:output method="xml" indent="yes"/>
-    <xsl:mode on-no-match="shallow-copy"/>
-
-    <xsl:template match="/">
-        <html>
-            <head>
-            <xsl:call-template name="meta"/>
-            </head>
-        </html>
+    <xsl:template name="meta">
+        
     </xsl:template>
 
     
