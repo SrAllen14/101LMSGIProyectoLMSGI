@@ -26,10 +26,10 @@ body{
 }
 
 .caja {
-    width: 170px;
+    width: 140px;
     padding: 20px;
-    justify-content: center;
     text-align: center;
+    align-items: center;
     gap: 20px;
     border-radius: 10px;
     background: #ffffff;
@@ -37,8 +37,7 @@ body{
 }
 
 ul{
-    list-style-type: square;
-    
+    list-style-type: none;  
 }
 
 .contenedor{
@@ -50,9 +49,8 @@ ul{
 }
 
 li{
-    text-align: justify;
     color: #02246e;
-    width: 100px;
+    margin-bottom: 10px;
 }
 
 
