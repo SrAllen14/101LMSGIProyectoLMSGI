@@ -2,3 +2,6 @@
 *.ogg
 *.mp3
 *.jpg
+pruebas/
+.vscode/
+.git/
