@@ -6,7 +6,7 @@
 
     <xsl:output method="xml" indent="yes"/>
     <xsl:mode on-no-match="shallow-copy"/>
-    <xsl:include href="../../lib/libhtml.xsl">
+    <xsl:include href="../../lib/libhtml.xsl"/>
 
     <xsl:template match="/prediccion" mode="#all">
         <html>
@@ -21,7 +21,7 @@
                     <caption>
                         EL TIEMPO. <xsl:value-of select="upper-case(concat(municipio/nombre, '(', municipio/provincia,')'))"/>
                     </caption>
-                    <xsl:call-template select="encTabla"/>
+                    <xsl:call-template name="encTabla"/>
                     <xsl:apply-templates select="dia"/>
                 </table>
             </body>
@@ -50,5 +50,4 @@
             </td>
         </tr>
     </xsl:template>
-
 </xsl:package>
