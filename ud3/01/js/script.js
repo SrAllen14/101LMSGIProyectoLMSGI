@@ -1,6 +1,7 @@
 var titulo = document.getElementById("titulo");
 var parrafo = document.getElementsByClassName("parrafo");
 var cuerpo = document.getElementById("cuerpo");
+var oscuro = true;
 
 
 titulo.innerText="Nuevo título";
@@ -51,8 +52,16 @@ function saludo(){
 }
 
 function fondoOscuro(){
-    cuerpo.style.backgroundColor = "#000000";
-    titulo.style.color = "white";
+    if(!oscuro){
+        cuerpo.style.backgroundColor = "black";
+        titulo.style.color = "white";
+        oscuro=true;
+    }
+    else{
+        cuerpo.style.backgroundColor = "white";
+        titulo.style.color = "black";
+        oscuro=false;
+    }
 }
 
 function cambiarParrafos(){
