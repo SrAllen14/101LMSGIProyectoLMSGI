@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-Serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    padding: 10px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 2vh;
+    background-color: #4e9ed4;
+}
+
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+#tablero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.fila{
+    display: flex;
+    gap: 10px;
+}
+
+.casilla{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    background-color: aquamarine;
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.casilla:hover{
+    background-color: bisque;
+    text-align: center;
+    align-items: center;
+    color: green;
+}
