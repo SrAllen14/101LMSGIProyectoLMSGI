@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ud6.2 JSON: Álvaro Allén Perlines</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            width: auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            background-color: #3599db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listado de personas</h1>
+    <div>
+        <button id="boton">Cargar Lista (JSON)</button>
+    </div>
+    <ul id="lista">
+
+    </ul>
+    <script>
+        let contenedor = document.getElementById("contenido");
+        document.getElementsById("boton").addEventListener("click", cargarLista);
+
+        function cargarLista(){
+            fetch('./02.json').then(response => {
+            if (!response.ok) throw new Error("Error en tiempo de ejecución al cargar")
+                return response.json();
+            })
+            .then(jsonData =>{
+                console.log(jsonData);
+                p=document.getElementById('lista');
+                p.innerHTML=`<span>Nombre: </span>${jsonData.nombre} <span>Edad:</span>${jsonData.edad}`
+            })
+            .catch(error => console.log(error));
+        }
+
+        personas.forEach(e => {
+            contenedor.innerHTML += `<li> <span class="clave"> Nombre: </span>${e.nombre}`+
+                `<span class="clave">Edad: </span>${e.edad}</li>`
+        });
+    </script>
+</body>
+</html>
