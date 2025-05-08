@@ -1,4 +1,5 @@
-[
+{"Participantes":[
+    
     {
         "nombre": "Lucia",
         "edad": 28
@@ -28,4 +29,4 @@
         "nombre": "Hugo",
         "edad": 16
     }
-]
+]}

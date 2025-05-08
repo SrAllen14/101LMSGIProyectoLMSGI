@@ -25,10 +25,11 @@
     <div>
         <button id="boton">Cargar Lista (JSON)</button>
     </div>
-    <ul id="lista">
+    <div id="contenido">
 
-    </ul>
+    </div>
     <script>
+        document.getElementById("boton").addEventListener("click", cargarLista);
         let contenedor = document.getElementById("contenido");
         document.getElementsById("boton").addEventListener("click", cargarLista);
 
@@ -37,10 +38,15 @@
             if (!response.ok) throw new Error("Error en tiempo de ejecución al cargar")
                 return response.json();
             })
-            .then(jsonData =>{
-                console.log(jsonData);
-                p=document.getElementById('lista');
-                p.innerHTML=`<span>Nombre: </span>${jsonData.nombre} <span>Edad:</span>${jsonData.edad}`
+            .then(datos =>{contenedor;
+                datos.Participantes.forEach(contenido =>{
+                    const nombre = contenido.nombre;
+                    const edad = contenido.edad;
+                    contenedor.innerHTML += `
+                    <p>
+                        <li>Nombre: ${nombre} - Edad: ${edad}</li>
+                    </p>`;
+                })
             })
             .catch(error => console.log(error));
         }
