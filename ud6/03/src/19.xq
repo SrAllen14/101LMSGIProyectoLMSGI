@@ -2,9 +2,10 @@
 
 <precios>
   {
-    let $a := for $x in /bookstore/book/price/text()
-              return <precio>{$x}</precio>,
-        $b := format-number(sum(/bookstore/book/price),'#.00')
-              return ($a,<total>{$b}</total>)
+   let $x :=
+    for $z in /bookstore/bookstore
+    return <book>{$</price/text()}</book>
+  , $y:=<total>{format-number(sum(/bookstore/book/price/text()), '#.00)}$</total
+    return ($x, $y)
   }
 </precios>
