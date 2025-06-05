@@ -3,7 +3,7 @@ declare option output:indent "yes";
 
 <libros>
     {
-        for $x in /bookstore/bok
+        for $x in /bookstore/book
         return
         <libro>
             <titulo>{$x/title/text()}</titulo>

@@ -1,5 +1,7 @@
 (:11. Mostrar el título y el autor de los libros del año 2005, y etiquetar cada uno de ellos con "lib2005":)
 
+declare option output:indent "yes";
+
 <libros>
 {
   for $x in /bookstore/book

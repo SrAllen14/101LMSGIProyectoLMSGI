@@ -1,5 +1,7 @@
 (:12. Mostrar los años de publicación, primero con for y luego con let. Etiquetar la salida con publicación.:)
 
+declare option output:indent "yes";
+
 (:<publicacion>
 {
   for $x in /bookstore/book

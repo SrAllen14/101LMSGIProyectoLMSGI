@@ -1,4 +1,5 @@
 (:5. Crea una página web que contenga todos los libros de su categoría, en la lista aparece el título con colores distintos en función de la categoría:)
+declare option output:indent "yes";
 
 <html lang="es">
 <head>

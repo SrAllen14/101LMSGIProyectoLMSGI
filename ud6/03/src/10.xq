@@ -1,4 +1,5 @@
 (:10. Transformar los dtos a un archivo XML con el siguiente contenido, donde el atributo autores indica el número de autores de cada libro.:)
+declare option output:indent "yes";
 
 <libros>
   {

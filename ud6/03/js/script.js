@@ -1,10 +1,10 @@
 let contenedor = document.getElementById("contenido");
 let indice = document.getElementById("indice");
-let numConsultarMostrar = 28;
+let numConsultasMostrar = 28;
 
 
 
-let extension = {
+let extensiones = {
     1: "txt",
     2: "txt",
     3: "html",
@@ -17,24 +17,26 @@ let extension = {
     23: "txt",
     24: "txt",
     28: "html"
-}
+};
 
-function cargarConsultas(){
+async function cargarConsultas(){
     for (let i = 1; i < numConsultasMostrar+1; i++){
         let extension = extensiones[i] || "xml";
 
+        indice.innerHTML += `<a href="#ej${i}" class="botones">Ejercicio ${i}</a>`;
+
         contenedor.innerHTML += `
-            <li>
+            <li id= "ej${i}">
                 <div>
                     <h2>Ejercicio ${i}</h2>
-                    <a href="src/${i}.${extension}">Consulta</a>
-                    <a href="target/{i}.${extension}"></a>
+                    <a href="src/${i}.xq">Consulta</a>
+                    <a href="target/{i}.${extension}">Resultado</a>
                 </div>
-                <a href="webroot/images/${i}c.png">
-                    <img src="webroot/images/${i}c.png" alt="Consulta ${i}">
+                <a href="images/${i}cod.PNG">
+                    <img src="images/${i}cod.PNG" alt="Consulta ${i}">
                 </a>
-                <a href="webroot/images/${i}r.png">
-                    <img src="webroot/images/${i}r.png" alt="Resultado ${i}"> 
+                <a href="images/${i}res.PNG">
+                    <img src="images/${i}res.PNG" alt="Resultado ${i}"> 
                 </a>
             </li>
         `
