@@ -1,5 +1,7 @@
 (:28. Mostrar los títulos en una tabla html.:)
 
+declare option output:indent "yes";
+
 <html>
   <body>
     <table>

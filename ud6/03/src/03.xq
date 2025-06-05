@@ -1,4 +1,5 @@
 (:3. Crear una pagina web (03.html) cuyo titulo de la web "UD6-3.3 Listado de libros. Alvaro Allen Perlines" y que contenga una lista con viñetas con los titulos de los libros:)
+declare option output:indent "yes";
 
 <html lang="es">
 <head>

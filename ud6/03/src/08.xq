@@ -1,4 +1,6 @@
 (:8. Uso de variables expresiones en un for $tema in (lista de valores), $y in (lista de valores). Para indicar la lista de valor de valorinicial to valorfinal, por ejemplo 1 to 100. Generar automáticamente la siguiente página web:)
+declare option output:indent "yes";
+
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>

@@ -2,12 +2,13 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			//Ejercicio 1 
 			"type": "xslt",
-			"label": "xslt: Saxon Transform (New)",
+			"label": "xslt: Ejercicio 01.html", //Label de ejecución
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
-			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
-			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
-			"resultPath": "${workspaceFolder}/ud5/07/target/index.html",
+			"xsltFile": "${workspaceFolder}/pruebas/04/src/01.xsl",
+			"xmlSource": "${workspaceFolder}/pruebas/04/data/01.xml",
+			"resultPath": "${workspaceFolder}/pruebas/04/target/01.html",
 			"allowSyntaxExtensions40": "off",
 			"messageEscaping": "adaptive",
 			"group": {
@@ -17,5 +18,6 @@
 				"$saxon-xslt"
 			]
 		}
+
 	]
 }
